@@ -1,0 +1,26 @@
+# ISSUES
+
+Multiple HOST added events (not able to reproduce)
+
+Perhaps a failed attempt.PTF tests should be based ona generic framework to insert table entries, like the p4runtime_lib in the basic P4 language tutorial:
+https://github.com/p4lang/tutorials/tree/master/exercises/p4runtime
+
+https://github.com/p4lang/tutorials/blob/master/exercises/p4runtime/mycontroller.py#L42
+
+
+mininet>
+*** WARN: switch spine1 died ☠️
+--------------------------------------------------------------------------------
+spine1 log (from /tmp/bmv2-spine1-log):
+...
+I0425 17:08:31.562700  4974 bmv2_chassis_manager.cc:423] State of port 1 in node 1: UP.
+I0425 17:08:31.562744  4974 bmv2_chassis_manager.cc:423] State of port 2 in node 1: UP.
+I0425 17:08:52.120419  4977 p4_service.cc:696] Controller (connection_id: 1, election_id: 20, uri: ipv4:127.0.0.1:34270) is connected as MASTER for node (aka device) with ID 1.
+I0425 17:08:52.432521  4977 p4_service.cc:696] Controller (connection_id: 1, election_id: 40, uri: ipv4:127.0.0.1:34270) is connected as MASTER for node (aka device) with ID 1.
+I0425 17:08:52.507608  4977 p4_service.cc:696] Controller (connection_id: 1, election_id: 40, uri: ipv4:127.0.0.1:34270) is connected as MASTER for node (aka device) with ID 1.
+--------------------------------------------------------------------------------
+
+
+mininet>
+mininet> switch spine1 start
+*** spine1 is already running!
