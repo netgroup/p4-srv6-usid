@@ -454,9 +454,9 @@ public class Ipv6RoutingComponent {
      */
     private Ip6Address getDeviceSid(DeviceId deviceId) {
         return getDeviceConfig(deviceId)
-                .map(Srv6DeviceConfig::mySid)
+                .map(Srv6DeviceConfig::myUSid)
                 .orElseThrow(() -> new ItemNotFoundException(
-                        "Missing mySid config for " + deviceId));
+                        "Missing myUSid config for " + deviceId));
     }
 
     /**

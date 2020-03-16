@@ -49,7 +49,7 @@ public class Srv6SidCompleter implements Completer {
         stream(deviceService.getDevices())
                 .map(d -> netCfgService.getConfig(d.id(), Srv6DeviceConfig.class))
                 .filter(Objects::nonNull)
-                .map(Srv6DeviceConfig::mySid)
+                .map(Srv6DeviceConfig::myUSid)
                 .filter(Objects::nonNull)
                 .forEach(sid -> strings.add(sid.toString()));
 

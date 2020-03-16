@@ -118,37 +118,7 @@ public class Srv6Component {
     }
 
     /**
-     * Populate the My SID table from the network configuration for the
-     * specified device.
-     *
-     * @param deviceId the device Id
-     */
-    private void setUpMySidTable(DeviceId deviceId) {
-
-        Ip6Address mySid = getMySid(deviceId);
-
-        log.info("Adding mySid rule on {} (sid {})...", deviceId, mySid);
-
-        String tableId = "IngressPipeImpl.my_sid_table";
-
-        PiCriterion match = PiCriterion.builder()
-                .matchLpm(
-                        PiMatchFieldId.of("hdr.ipv6.dst_addr"),
-                        mySid.toOctets(), 128)
-                .build();
-
-        PiTableAction action = PiAction.builder()
-                .withId(PiActionId.of("IngressPipeImpl.end_action"))
-                .build();
-
-        FlowRule myStationRule = Utils.buildFlowRule(
-                deviceId, appId, tableId, match, action);
-
-        flowRuleService.applyFlowRules(myStationRule);
-    }
-
-    /**
-     * Populate the My SID table from the network configuration for the
+     * Populate the My micro SID table from the network configuration for the
      * specified device.
      *
      * @param deviceId the device Id
@@ -314,7 +284,6 @@ public class Srv6Component {
                 mainComponent.getExecutorService().execute(() -> {
                     log.info("{} event! deviceId={}", event.type(), deviceId);
 
-                    setUpMySidTable(event.subject().id());
                     setUpMyUSidTable(event.subject().id());
                 });
             }
@@ -337,7 +306,6 @@ public class Srv6Component {
                 .filter(mastershipService::isLocalMaster)
                 .forEach(deviceId -> {
                     log.info("*** SRV6 - Starting initial set up for {}...", deviceId);
-                    this.setUpMySidTable(deviceId);
                     this.setUpMyUSidTable(deviceId);
                 });
     }
@@ -351,19 +319,6 @@ public class Srv6Component {
     private Optional<Srv6DeviceConfig> getDeviceConfig(DeviceId deviceId) {
         Srv6DeviceConfig config = networkConfigService.getConfig(deviceId, Srv6DeviceConfig.class);
         return Optional.ofNullable(config);
-    }
-
-    /**
-     * Returns Srv6 SID for the given device.
-     *
-     * @param deviceId the device ID
-     * @return SID for the device
-     */
-    private Ip6Address getMySid(DeviceId deviceId) {
-        return getDeviceConfig(deviceId)
-                .map(Srv6DeviceConfig::mySid)
-                .orElseThrow(() -> new RuntimeException(
-                        "Missing mySid config for " + deviceId));
     }
     
     /**

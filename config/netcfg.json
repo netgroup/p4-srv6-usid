@@ -4,12 +4,11 @@
       "basic": {
         "managementAddress": "grpc://127.0.0.1:50001?device_id=1",
         "driver": "stratum-bmv2",
-        "pipeconf": "org.p4.srv6-uSID"
+        "pipeconf": "org.p4.srv6_usid"
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:aa:00:00:00:01",
-        "mySid": "3:101:2::",
-        "myUSid": "aaaa:bbbb:1a::",
+        "uN": "bbbb:bbbb:1a::",
         "isCore": false
       }
     },
@@ -17,12 +16,11 @@
       "basic": {
         "managementAddress": "grpc://127.0.0.1:50002?device_id=1",
         "driver": "stratum-bmv2",
-        "pipeconf": "org.p4.srv6-uSID"
+        "pipeconf": "org.p4.srv6_usid"
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:aa:00:00:00:02",
-        "mySid": "3:102:2::",
-        "myUSid": "aaaa:bbbb:2a::",
+        "uN": "bbbb:bbbb:2a::",
         "isCore": false      
       }
     },
@@ -30,12 +28,11 @@
       "basic": {
         "managementAddress": "grpc://127.0.0.1:50011?device_id=1",
         "driver": "stratum-bmv2",
-        "pipeconf": "org.p4.srv6-uSID"
+        "pipeconf": "org.p4.srv6_usid"
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:bb:00:00:00:01",
-        "mySid": "3:201:2::",
-        "myUSid": "aaaa:bbbb:0100::",
+        "uN": "bbbb:bbbb:0100::",
         "isCore": true
       }
     },
@@ -43,12 +40,11 @@
       "basic": {
         "managementAddress": "grpc://127.0.0.1:50012?device_id=1",
         "driver": "stratum-bmv2",
-        "pipeconf": "org.p4.srv6-uSID"
+        "pipeconf": "org.p4.srv6_usid"
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:bb:00:00:00:02",
-        "mySid": "3:202:2::",
-        "myUSid": "aaaa:bbbb:0200::",
+        "uN": "bbbb:bbbb:0200::",
         "isCore": true
       }
     },
@@ -56,12 +52,11 @@
       "basic": {
         "managementAddress": "grpc://127.0.0.1:50013?device_id=1",
         "driver": "stratum-bmv2",
-        "pipeconf": "org.p4.srv6-uSID"
+        "pipeconf": "org.p4.srv6_usid"
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:bb:00:00:00:03",
-        "mySid": "3:203:2::",
-        "myUSid": "aaaa:bbbb:0300::",
+        "uN": "bbbb:bbbb:0300::",
         "isCore": true
       }
     },
@@ -69,12 +64,11 @@
       "basic": {
         "managementAddress": "grpc://127.0.0.1:50014?device_id=1",
         "driver": "stratum-bmv2",
-        "pipeconf": "org.p4.srv6-uSID"
+        "pipeconf": "org.p4.srv6_usid"
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:bb:00:00:00:04",
-        "mySid": "3:204:2::",
-        "myUSid": "aaaa:bbbb:0400::",
+        "uN": "bbbb:bbbb:0400::",
         "isCore": true
       }
     }

@@ -28,15 +28,13 @@ public class Srv6DeviceConfig extends Config<DeviceId> {
 
     public static final String CONFIG_KEY = "srv6DeviceConfig";
     private static final String MY_STATION_MAC = "myStationMac";
-    private static final String MY_SID = "mySid";
-    private static final String MY_USID = "myUSid";
+    private static final String MY_USID = "uN";
     private static final String IS_CORE = "isCore";
 
     @Override
     public boolean isValid() {
-        return hasOnlyFields(MY_STATION_MAC, MY_SID, IS_CORE, MY_USID) &&
+        return hasOnlyFields(MY_STATION_MAC, IS_CORE, MY_USID) &&
                 myStationMac() != null &&
-                mySid() != null &&
                 myUSid() != null;
     }
 
@@ -50,16 +48,6 @@ public class Srv6DeviceConfig extends Config<DeviceId> {
         return mac != null ? MacAddress.valueOf(mac) : null;
     }
 
-    /**
-     * Gets the SRv6 segment ID (SID) of the switch.
-     *
-     * @return IP address of the router. Or null if not configured.
-     */
-    public Ip6Address mySid() {
-        String ip = get(MY_SID, null);
-        return ip != null ? Ip6Address.valueOf(ip) : null;
-    }
-    
     /**
      * Gets the SRv6 micro segment ID (uSID) of the switch.
      *

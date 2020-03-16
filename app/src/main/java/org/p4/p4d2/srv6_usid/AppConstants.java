@@ -20,8 +20,8 @@ import org.onosproject.net.pi.model.PiPipeconfId;
 
 public class AppConstants {
 
-    public static final String APP_NAME = "org.p4.srv6-uSID";
-    public static final PiPipeconfId PIPECONF_ID = new PiPipeconfId("org.p4.srv6-uSID");
+    public static final String APP_NAME = "org.p4.srv6_usid";
+    public static final PiPipeconfId PIPECONF_ID = new PiPipeconfId("org.p4.srv6_usid");
 
     public static final int DEFAULT_FLOW_RULE_PRIORITY = 10;
     public static final int INITIAL_SETUP_DELAY = 2; // Seconds.
