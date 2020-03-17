@@ -22,7 +22,7 @@
 #include "include/checksum.p4"
 
 #define CPU_CLONE_SESSION_ID 99
-#define USID_BLOCK_MASK 0xffffffff000000000000000000000000
+#define USID_BLOCK_MASK     0xffffffff000000000000000000000000
 
 
 control IngressPipeImpl (inout parsed_headers_t hdr,
@@ -136,7 +136,7 @@ control IngressPipeImpl (inout parsed_headers_t hdr,
     }
 
     action end_action_usid() {
-        hdr.ipv6.dst_addr = (hdr.ipv6.dst_addr & USID_BLOCK_MASK) | ((hdr.ipv6.dst_addr & ~((bit<128>)USID_BLOCK_MASK)) << 16);
+        hdr.ipv6.dst_addr = (hdr.ipv6.dst_addr & USID_BLOCK_MASK) | ((hdr.ipv6.dst_addr << 16) & ~((bit<128>)USID_BLOCK_MASK));
     }
 
     direct_counter(CounterType.packets_and_bytes) my_sid_table_counter;

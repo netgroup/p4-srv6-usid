@@ -1,66 +1,167 @@
-# end-r1
-route-insert device:end-r1 2001:1:1::1 128 00:00:00:00:00:10
-route-insert device:end-r1 2001:1:2::1 128 00:bb:00:00:00:01
-# ------------------ uSID
-route-insert device:end-r1 bbbb:bbbb:0100:: 48 00:bb:00:00:00:01
-route-insert device:end-r1 bbbb:bbbb:0200:: 48 00:bb:00:00:00:02
-route-insert device:end-r1 bbbb:bbbb:0300:: 48 00:bb:00:00:00:01
-route-insert device:end-r1 bbbb:bbbb:0400:: 48 00:bb:00:00:00:02
+############ r1
+#h1
+route-insert device:r1 2001:1:1::1 128 00:00:00:00:00:10
+#h2
+route-insert device:r1 2001:1:2::1 128 00:aa:00:00:00:02
 
+#r2
+route-insert device:r1 fcbb:bbbb:0200:: 48 00:aa:00:00:00:02
+#r3
+route-insert device:r1 fcbb:bbbb:0300:: 48 00:aa:00:00:00:02
+#r4
+route-insert device:r1 fcbb:bbbb:0400:: 48 00:aa:00:00:00:04
+#r5
+route-insert device:r1 fcbb:bbbb:0500:: 48 00:aa:00:00:00:04
+#r6
+route-insert device:r1 fcbb:bbbb:0600:: 48 00:aa:00:00:00:02
+#r7
+route-insert device:r1 fcbb:bbbb:0700:: 48 00:aa:00:00:00:02
+#r8
+route-insert device:r1 fcbb:bbbb:0800:: 48 00:aa:00:00:00:04
 
-# end-r2
-route-insert device:end-r2 2001:1:1::1 128 00:bb:00:00:00:04
-route-insert device:end-r2 2001:1:2::1 128 00:00:00:00:00:20
-# ------------------ uSID
-route-insert device:end-r2 bbbb:bbbb:0100:: 48 00:bb:00:00:00:03
-route-insert device:end-r2 bbbb:bbbb:0200:: 48 00:bb:00:00:00:04
-route-insert device:end-r2 bbbb:bbbb:0300:: 48 00:bb:00:00:00:03
-route-insert device:end-r2 bbbb:bbbb:0400:: 48 00:bb:00:00:00:04
+############ r2
+#h1
+route-insert device:r2 2001:1:1::1 128 00:aa:00:00:00:01
+#h2
+route-insert device:r2 2001:1:2::1 128 00:00:00:00:00:20
 
+#r1
+route-insert device:r2 fcbb:bbbb:0100:: 48 00:aa:00:00:00:01
+#r3
+route-insert device:r2 fcbb:bbbb:0300:: 48 00:aa:00:00:00:03
+#r4
+route-insert device:r2 fcbb:bbbb:0400:: 48 00:aa:00:00:00:03
+#r5
+route-insert device:r2 fcbb:bbbb:0500:: 48 00:aa:00:00:00:01
+#r6
+route-insert device:r2 fcbb:bbbb:0600:: 48 00:aa:00:00:00:03
+#r7
+route-insert device:r2 fcbb:bbbb:0700:: 48 00:aa:00:00:00:03
+#r8
+route-insert device:r2 fcbb:bbbb:0800:: 48 00:aa:00:00:00:01
 
-# transit-r1
-route-insert device:transit-r1 2001:1:1::1 128 00:aa:00:00:00:01
-route-insert device:transit-r1 2001:1:2::1 128 00:bb:00:00:00:03
-# ------------------ uSID
-route-insert device:transit-r1 bbbb:bbbb:0200:: 48 00:bb:00:00:00:04
-route-insert device:transit-r1 bbbb:bbbb:0300:: 48 00:bb:00:00:00:03
-route-insert device:transit-r1 bbbb:bbbb:0400:: 48 00:bb:00:00:00:04
+############ r3
+#h1
+route-insert device:r3 2001:1:1::1 128 00:aa:00:00:00:02
+#h2
+route-insert device:r3 2001:1:2::1 128 00:aa:00:00:00:02
 
-route-insert device:transit-r1 bbbb:bbbb:1a:: 48 00:aa:00:00:00:01
-route-insert device:transit-r1 bbbb:bbbb:2a:: 48 00:bb:00:00:00:03
+#r1
+route-insert device:r3 fcbb:bbbb:0100:: 48 00:aa:00:00:00:04
+#r2
+route-insert device:r3 fcbb:bbbb:0200:: 48 00:aa:00:00:00:02
+#r4
+route-insert device:r3 fcbb:bbbb:0400:: 48 00:aa:00:00:00:04
+#r5
+route-insert device:r3 fcbb:bbbb:0500:: 48 00:aa:00:00:00:04
+#r6
+route-insert device:r3 fcbb:bbbb:0600:: 48 00:aa:00:00:00:06
+#r7
+route-insert device:r3 fcbb:bbbb:0700:: 48 00:aa:00:00:00:06
+#r8
+route-insert device:r3 fcbb:bbbb:0800:: 48 00:aa:00:00:00:04
 
+############ r4
+#h1
+route-insert device:r4 2001:1:1::1 128 00:aa:00:00:00:01
+#h2
+route-insert device:r4 2001:1:2::1 128 00:aa:00:00:00:03
 
-# transit-r2
-route-insert device:transit-r2 2001:1:1::1 128 00:aa:00:00:00:01
-route-insert device:transit-r2 2001:1:2::1 128 00:bb:00:00:00:02
-# ------------------ uSID
-route-insert device:transit-r2 bbbb:bbbb:0100:: 48 00:bb:00:00:00:03
-route-insert device:transit-r2 bbbb:bbbb:0300:: 48 00:bb:00:00:00:03
-route-insert device:transit-r2 bbbb:bbbb:0400:: 48 00:bb:00:00:00:04
+#r1
+route-insert device:r4 fcbb:bbbb:0100:: 48 00:aa:00:00:00:01
+#r2
+route-insert device:r4 fcbb:bbbb:0200:: 48 00:aa:00:00:00:03
+#r3
+route-insert device:r4 fcbb:bbbb:0300:: 48 00:aa:00:00:00:03
+#r5
+route-insert device:r4 fcbb:bbbb:0500:: 48 00:aa:00:00:00:05
+#r6
+route-insert device:r4 fcbb:bbbb:0600:: 48 00:aa:00:00:00:05
+#r7
+route-insert device:r4 fcbb:bbbb:0700:: 48 00:aa:00:00:00:03
+#r8
+route-insert device:r4 fcbb:bbbb:0800:: 48 00:aa:00:00:00:05
 
-route-insert device:transit-r2 bbbb:bbbb:1a:: 48 00:aa:00:00:00:01
-route-insert device:transit-r2 bbbb:bbbb:2a:: 48 00:bb:00:00:00:04
+############ r5
+#h1
+route-insert device:r5 2001:1:1::1 128 00:aa:00:00:00:04
+#h2
+route-insert device:r5 2001:1:2::1 128 00:aa:00:00:00:06
 
+#r1
+route-insert device:r5 fcbb:bbbb:0100:: 48 00:aa:00:00:00:04
+#r2
+route-insert device:r5 fcbb:bbbb:0200:: 48 00:aa:00:00:00:06
+#r3
+route-insert device:r5 fcbb:bbbb:0300:: 48 00:aa:00:00:00:06
+#r4
+route-insert device:r5 fcbb:bbbb:0400:: 48 00:aa:00:00:00:04
+#r6
+route-insert device:r5 fcbb:bbbb:0600:: 48 00:aa:00:00:00:06
+#r7
+route-insert device:r5 fcbb:bbbb:0700:: 48 00:aa:00:00:00:08
+#r8
+route-insert device:r5 fcbb:bbbb:0800:: 48 00:aa:00:00:00:08
 
-# transit-r3
-route-insert device:transit-r3 2001:1:1::1 128 00:bb:00:00:00:02
-route-insert device:transit-r3 2001:1:2::1 128 00:aa:00:00:00:02
-# ------------------ uSID
-route-insert device:transit-r3 bbbb:bbbb:0200:: 48 00:bb:00:00:00:02
-route-insert device:transit-r3 bbbb:bbbb:0100:: 48 00:bb:00:00:00:01
-route-insert device:transit-r3 bbbb:bbbb:0400:: 48 00:bb:00:00:00:02
+############ r6
+#h1
+route-insert device:r6 2001:1:1::1 128 00:aa:00:00:00:05
+#h2
+route-insert device:r6 2001:1:2::1 128 00:aa:00:00:00:03
 
-route-insert device:transit-r3 bbbb:bbbb:1a:: 48 00:bb:00:00:00:02
-route-insert device:transit-r3 bbbb:bbbb:2a:: 48 00:aa:00:00:00:02
+#r1
+route-insert device:r6 fcbb:bbbb:0100:: 48 00:aa:00:00:00:05
+#r2
+route-insert device:r6 fcbb:bbbb:0200:: 48 00:aa:00:00:00:03
+#r3
+route-insert device:r6 fcbb:bbbb:0300:: 48 00:aa:00:00:00:03
+#r4
+route-insert device:r6 fcbb:bbbb:0400:: 48 00:aa:00:00:00:05
+#r5
+route-insert device:r6 fcbb:bbbb:0500:: 48 00:aa:00:00:00:05
+#r7
+route-insert device:r6 fcbb:bbbb:0700:: 48 00:aa:00:00:00:07
+#r8
+route-insert device:r6 fcbb:bbbb:0800:: 48 00:aa:00:00:00:07
 
+############ r7
+#h1
+route-insert device:r7 2001:1:1::1 128 00:aa:00:00:00:08
+#h2
+route-insert device:r7 2001:1:2::1 128 00:aa:00:00:00:06
 
-# transit-r4
-route-insert device:transit-r4 2001:1:1::1 128 00:bb:00:00:00:02
-route-insert device:transit-r4 2001:1:2::1 128 00:aa:00:00:00:02
-# ------------------ uSID
-route-insert device:transit-r4 bbbb:bbbb:0200:: 48 00:bb:00:00:00:02
-route-insert device:transit-r4 bbbb:bbbb:0300:: 48 00:bb:00:00:00:01
-route-insert device:transit-r4 bbbb:bbbb:0100:: 48 00:bb:00:00:00:01
+#r1
+route-insert device:r7 fcbb:bbbb:0100:: 48 00:aa:00:00:00:08
+#r2
+route-insert device:r7 fcbb:bbbb:0200:: 48 00:aa:00:00:00:06
+#r3
+route-insert device:r7 fcbb:bbbb:0300:: 48 00:aa:00:00:00:06
+#r4
+route-insert device:r7 fcbb:bbbb:0400:: 48 00:aa:00:00:00:08
+#r5
+route-insert device:r7 fcbb:bbbb:0500:: 48 00:aa:00:00:00:08
+#r6
+route-insert device:r7 fcbb:bbbb:0600:: 48 00:aa:00:00:00:06
+#r8
+route-insert device:r7 fcbb:bbbb:0800:: 48 00:aa:00:00:00:08
 
-route-insert device:transit-r4 bbbb:bbbb:1a:: 48 00:bb:00:00:00:02
-route-insert device:transit-r4 bbbb:bbbb:2a:: 48 00:aa:00:00:00:02
+############ r8
+#h1
+route-insert device:r8 2001:1:1::1 128 00:aa:00:00:00:05
+#h2
+route-insert device:r8 2001:1:2::1 128 00:aa:00:00:00:07
+
+#r1
+route-insert device:r8 fcbb:bbbb:0100:: 48 00:aa:00:00:00:05
+#r2
+route-insert device:r8 fcbb:bbbb:0200:: 48 00:aa:00:00:00:07
+#r3
+route-insert device:r8 fcbb:bbbb:0300:: 48 00:aa:00:00:00:07
+#r4
+route-insert device:r8 fcbb:bbbb:0400:: 48 00:aa:00:00:00:05
+#r5
+route-insert device:r8 fcbb:bbbb:0500:: 48 00:aa:00:00:00:05
+#r6
+route-insert device:r8 fcbb:bbbb:0600:: 48 00:aa:00:00:00:07
+#r7
+route-insert device:r8 fcbb:bbbb:0700:: 48 00:aa:00:00:00:07
