@@ -201,32 +201,6 @@ public class Srv6Component {
     }
 
     /**
-     * Insert a SRv6 packet tracing header and list
-     *
-     * @param deviceId     device ID
-     * @param destIp       target IP address for the SRv6 policy
-     * @param prefixLength prefix length for the target IP
-     * @param segmentList  list of SRv6 SIDs that make up the path
-     */
-    public void insertSrv6TracingInsertRule(DeviceId deviceId, Ip6Address destIp, int prefixLength) {
-        String tableId = "IngressPipeImpl.srv6_tracing";
-        
-        PiCriterion match = PiCriterion.builder()
-                .matchLpm(PiMatchFieldId.of("hdr.ipv6.dst_addr"), destIp.toOctets(), prefixLength)
-                .build();
-
-        PiAction action = PiAction.builder()
-                .withId(PiActionId.of("IngressPipeImpl.insert_srv6_pkt_tracing_header_list_4"))
-                .build();
-
-        final FlowRule rule = Utils.buildFlowRule(
-                deviceId, appId, tableId, match, action);
-
-        flowRuleService.applyFlowRules(rule);
-    }
-
-
-    /**
      * Remove all SRv6 transit insert polices for the specified device.
      *
      * @param deviceId device ID
