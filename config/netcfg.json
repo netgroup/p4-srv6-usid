@@ -8,7 +8,7 @@
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:aa:00:00:00:01",
-        "uN": "fcbb:bbbb:0100::",
+        "uN": "fcbb:bbbb:01::",
         "isCore": false
       }
     },
@@ -20,7 +20,7 @@
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:aa:00:00:00:02",
-        "uN": "fcbb:bbbb:0200::",
+        "uN": "fcbb:bbbb:02::",
         "isCore": false      
       }
     },
@@ -32,7 +32,7 @@
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:aa:00:00:00:03",
-        "uN": "fcbb:bbbb:0300::",
+        "uN": "fcbb:bbbb:03::",
         "isCore": true
       }
     },
@@ -44,7 +44,7 @@
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:aa:00:00:00:04",
-        "uN": "fcbb:bbbb:0400::",
+        "uN": "fcbb:bbbb:04::",
         "isCore": true
       }
     },
@@ -56,7 +56,7 @@
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:aa:00:00:00:05",
-        "uN": "fcbb:bbbb:0500::",
+        "uN": "fcbb:bbbb:05::",
         "isCore": true
       }
     },
@@ -68,7 +68,7 @@
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:aa:00:00:00:06",
-        "uN": "fcbb:bbbb:0600::",
+        "uN": "fcbb:bbbb:06::",
         "isCore": true
       }
     },
@@ -80,7 +80,7 @@
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:aa:00:00:00:07",
-        "uN": "fcbb:bbbb:0700::",
+        "uN": "fcbb:bbbb:07::",
         "isCore": true
       }
     },
@@ -92,7 +92,7 @@
       },
       "srv6DeviceConfig": {
         "myStationMac": "00:aa:00:00:00:08",
-        "uN": "fcbb:bbbb:0800::",
+        "uN": "fcbb:bbbb:08::",
         "isCore": true
       }
     }
