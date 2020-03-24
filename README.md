@@ -32,10 +32,9 @@ SRv6 "Micro program" [video tutorial](http://www.segment-routing.net/20200212-sr
 <!--- img source (new version in gslide):
       https://docs.google.com/presentation/d/1rV0ViQYk9lYUnJH16zvf5qBDUK4yTWAeHoryo6Fe0jo/edit#slide=id.g7f4100c2bd_6_0 
       export the slide as .png, cut to roughly 615x341, and upload in docs/images with the same name --->
-
 ![p4-srv6-usid-demo-topology.jpg](<./docs/images/p4-srv6-usid-demo-topology.png>)
 
-The demo runs on a mininet topology made up of eight P4 enabled switches (based on bmv2 P4 software implementation) and two hosts that represent Site A and Site B. For this demo we rely on static routing for simplicity.
+The demo runs on a mininet topology made up of eight P4 enabled switches (based on [bmv2](https://github.com/p4lang/behavioral-model) P4 software implementation) and two hosts that represent Site A and Site B. For this demo we rely on static routing for simplicity.
 
 The Onos controller is used to configure the P4 software switches with the various table entries, e.g. IPv6 routes, L2 forwarding entries, SRv6 micro-instructions , etc.
 Onos works as a service in which you can instantiate the applications using the ONOS SDK.
