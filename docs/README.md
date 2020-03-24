@@ -6,7 +6,7 @@ efficient representation, for example using two bytes for uSID instead of using
 a normal IPv6 address (16 bytes) for a regular SRv6 segment.
 
 In the context of the [ROSE](https://netgroup.github.io/rose/) project, we have 
-implemented the SRv6 uSID solution using the [P4 language](https://github.com/p4lang/tutorials)
+implemented the SRv6 uSID solution using the [P4](https://www.opennetworking.org/p4/) [language](https://github.com/p4lang/tutorials)
 and realized a DEMO, illustrated in the following figure.
 
 <!--- img source (new version in gslide):
