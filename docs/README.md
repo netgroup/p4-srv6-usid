@@ -12,11 +12,9 @@ and realized a DEMO, illustrated in the following figure.
 <!--- img source (new version in gslide):
       https://docs.google.com/presentation/d/1rV0ViQYk9lYUnJH16zvf5qBDUK4yTWAeHoryo6Fe0jo/edit#slide=id.g7f4100c2bd_6_0 
       export the slide as .png, cut to roughly 615x341, and upload in docs/images with the same name --->
-![p4-srv6-usid-demo-topology.jpg](<./docs/images/p4-srv6-usid-demo-topology.png>
+![p4-srv6-usid-demo-topology.jpg](<./docs/images/p4-srv6-usid-demo-topology.png>)
 
-The demo runs on a mininet topology made up of eight P4 enabled switches (based on [bmv2](https://github.com/p4lang/behavioral-model) P4 software implementation) and two hosts that represent Site A and Site B. 
-
-The source code and the detailed instruction to run the demo are reported below.
+The demo runs on a mininet topology made up of eight P4 enabled switches (based on [bmv2](https://github.com/p4lang/behavioral-model) P4 software implementation) and two hosts that represent Site A and Site B. The source code and the detailed instruction to run the demo are reported below.
 
 ### P4 SRv6 uSID implementation source code and demo
 
