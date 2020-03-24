@@ -7,7 +7,7 @@ This repository hosts the Srv6 micro SID implementation on P4 and features a DEM
 
 This demo is based on the P4 tutorial by Open Networking Foundation. As such, it is possible to find more information about the above listed software modules in their [repository](https://github.com/opennetworkinglab/onos-p4-tutorial). There you can also find useful material like the slides explaining the tutorial and a prepared Ubuntu 18 virtual machine with all the software installed. It is strongly recommended to download the prepared VM and run the DEMO inside it, as it contains the several dependencies needed to run the software.
 
-In the following, we will present only the steps needed to run the SRv6 micro SID demo.
+In the following, we will present only the steps needed to run the SRv6 micro SID demo, starting from the downloaded VM.
 
 ## Repository structure
 
@@ -18,6 +18,26 @@ This repository is structured as follows:
  * `mininet/` Mininet script to emulate a topology of `stratum_bmv2` devices
  * `config/` configuration files
  * `docs/` documentation
+
+## DEMO overview
+
+In this demo we illustrate the use-case of transporting customer packets over a SRv6 network from Site A to Site B along the shortest path through nodes 8, 7 and 2.
+
+For a complete description of the proposed use-case please refer to the 
+SRv6 "Micro program" [video tutorial](http://www.segment-routing.net/20200212-srv6-status/srv6-technology-and-use-cases-part5) available on the
+[Segment Routing website](http://www.segment-routing.net/)
+
+<!--- img source (old version in draw.io):
+      https://drive.google.com/file/d/1vMB6GEX-DhCClDEddQC_Ss_MY_HNiwAq/view?usp=sharing --->
+<!--- img source (new version in gslide):
+      https://docs.google.com/presentation/d/1rV0ViQYk9lYUnJH16zvf5qBDUK4yTWAeHoryo6Fe0jo/edit#slide=id.g7f4100c2bd_6_0 --->
+
+![p4-srv6-usid-demo-topology.jpg](<./docs/images/p4-srv6-usid-demo-topology.png>)
+
+The demo runs on a mininet topology made up of eight P4 enabled switches (based on bmv2 P4 software implementation) and two hosts that represent Site A and Site B. For this demo we rely on static routing for simplicity.
+
+The Onos controller is used to configure the P4 software switches with the various table entries, e.g. IPv6 routes, L2 forwarding entries, SRv6 micro-instructions , etc.
+Onos works as a service in which you can instantiate the applications using the ONOS SDK.
 
 ## DEMO commands
 
@@ -35,20 +55,7 @@ To ease the execution of the commands needed to setup the required software, we 
 | `make reset`        | Resets the tutorial environment                        |
 | `make onos-upgrade` | Upgrades the ONOS version                              |
 
-## DEMO description
-
-In this demo we illustrate the use-case of transporting customer packets over a SRv6 network from Site A to Site B along the shortest path through nodes 8, 7 and 2.
-
-For a complete description of the illustration please refer to the recording available on
-[Segment Routing official website](http://www.segment-routing.net/20200212-srv6-status/srv6-technology-and-use-cases-part5)
-
-<!--- img source:https://drive.google.com/file/d/1vMB6GEX-DhCClDEddQC_Ss_MY_HNiwAq/view?usp=sharing --->
-![p4-srv6-usid-demo-topology.jpg](<./docs/images/p4-srv6-usid-demo-topology.jpg>)
-
-The demo runs on a mininet topology made up of eight P4 enabled switches (based on bmv2 P4 software implementation) and two hosts that represent Site A and Site B. For this demo we rely on static routing for simplicity.
-
-The Onos controller is used to configure the P4 software switches with the various table entries, e.g. IPv6 routes, L2 forwarding entries, SRv6 micro-instructions , etc.
-Onos works as a service in which you can instantiate the applications using the ONOS SDK.
+## Detailed DEMO description
 
 ### 1. Start ONOS
 
