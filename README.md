@@ -21,7 +21,7 @@ This repository is structured as follows:
 
 ## DEMO overview
 
-In this demo we illustrate the use-case of transporting customer packets over a SRv6 network from Site A to Site B along the shortest path through nodes 8, 7 and 2.
+In this demo we illustrate the use-case of transporting customer packets over a SRv6 network from Site A to Site B forcing the packets to cross two waypoints (nodes R8 and R7) along the path from node R1 to node R2. Regular shortest path routing is used from R1 to R8, from R8 to R7 and from R7 to R2.
 
 For a complete description of the proposed use-case please refer to the 
 SRv6 "Micro program" [video tutorial](http://www.segment-routing.net/20200212-srv6-status/srv6-technology-and-use-cases-part5) available on the
@@ -30,7 +30,8 @@ SRv6 "Micro program" [video tutorial](http://www.segment-routing.net/20200212-sr
 <!--- img source (old version in draw.io):
       https://drive.google.com/file/d/1vMB6GEX-DhCClDEddQC_Ss_MY_HNiwAq/view?usp=sharing --->
 <!--- img source (new version in gslide):
-      https://docs.google.com/presentation/d/1rV0ViQYk9lYUnJH16zvf5qBDUK4yTWAeHoryo6Fe0jo/edit#slide=id.g7f4100c2bd_6_0 --->
+      https://docs.google.com/presentation/d/1rV0ViQYk9lYUnJH16zvf5qBDUK4yTWAeHoryo6Fe0jo/edit#slide=id.g7f4100c2bd_6_0 
+      export the slide as .png, cut to roughly 615x341, and upload in docs/images with the same name --->
 
 ![p4-srv6-usid-demo-topology.jpg](<./docs/images/p4-srv6-usid-demo-topology.png>)
 
