@@ -131,7 +131,7 @@ control IngressPipeImpl (inout parsed_headers_t hdr,
     action end_action() {
         // decrement segments left
         hdr.srv6h.segment_left = hdr.srv6h.segment_left - 1;
-        // set destination IP address to next segment --- non me piace sta cosa
+        // set destination IP address to next segment
         hdr.ipv6.dst_addr = local_metadata.next_srv6_sid;
     }
 
