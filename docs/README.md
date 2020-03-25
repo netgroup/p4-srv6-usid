@@ -1,6 +1,8 @@
-<!--- the title is not needed here, as it is taken from the project description in Github 
-# SRv6 uSID (micro segment) implementation on P4 
+ 
+<!--- the previous line with a space is needed for github pages
+      the title is not needed here, as it is taken from the project description in Github 
 --->
+
 The SRv6 "micro segment" (uSID for short) solution is an extension to the SRv6 Network
 Programming model. It allows expressing SRv6 segments with a very compact and 
 efficient representation, for example using two bytes for uSID instead of using
@@ -19,7 +21,7 @@ The demo runs on a mininet topology made up of eight P4 enabled switches (based 
 
 ### P4 SRv6 uSID implementation source code and demo
 
-https://github.com/netgroup/p4-srv6-usid
+[https://github.com/netgroup/p4-srv6-usid](https://github.com/netgroup/p4-srv6-usid)
 
 ### Reference IETF documents
 
