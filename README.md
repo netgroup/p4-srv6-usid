@@ -5,6 +5,8 @@ This repository hosts the Srv6 uSID (i.e. micro SID) implementation on P4 and fe
 - behavioral-model-v2 (bmv2) for the software implementation of the P4 datapath;
 - onos to control the P4 enabled switches.
 
+This is the [project web page](https://netgroup.github.io/p4-srv6-usid/), part of the [ROSE](https://netgroup.github.io/rose/) project.
+
 This demo is based on the P4 tutorial by Open Networking Foundation. As such, it is possible to find more information about the above listed software modules in their [repository](https://github.com/opennetworkinglab/onos-p4-tutorial). There you can also find useful material like the slides explaining the tutorial and a prepared Ubuntu 18 virtual machine with all the software installed. It is strongly recommended to download the prepared VM and run the DEMO inside it, as it contains the several dependencies needed to run the software.
 
 In the following, we will present only the steps needed to run the SRv6 micro SID demo, starting from the downloaded VM.
