@@ -30,7 +30,7 @@ control IngressPipeImpl (inout parsed_headers_t hdr,
                          inout standard_metadata_t standard_metadata) {
 
     action drop() {
-        mark_to_drop();
+        mark_to_drop(standard_metadata);
     }
 
     action set_output_port(port_num_t port_num) {
@@ -304,7 +304,7 @@ control EgressPipeImpl (inout parsed_headers_t hdr,
 
         if (local_metadata.is_multicast == true
              && standard_metadata.ingress_port == standard_metadata.egress_port) {
-            mark_to_drop();
+            mark_to_drop(standard_metadata);
         }
     }
 }
